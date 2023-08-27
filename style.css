@@ -1,10 +1,16 @@
 :root {
     --primarycolor: #fff;
-    --background-color: black;
-
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
-    background-image: url("https: //t4.ftcdn.net/jpg/05/47/30/29/360_F_547302900_pjTammhIRQBdxn1hzX58gMQrMR9fy31I.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primarycolor);
+    background-image: url("/Hackathon1.0_Projects/Servery_form/images/bg.jpg");
+    background-size: cover;
+}
+
+.container {
+    
 }
