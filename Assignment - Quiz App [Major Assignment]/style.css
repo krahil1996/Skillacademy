@@ -1,6 +1,6 @@
 :root {
     --bodyColor: #f5f3f3f1;
-    --color: #5CC2F2;
+    --color: #49b4e6;
     --gray: #646566;
 }
 
@@ -9,22 +9,33 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+h2 {
+    color: var(--color)
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background-color: var(--bodyColor);
 }
 
 .container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    flex-grow: var(--color);
 }
 
 .main {
     width: 70%;
-    height: 91vh;
+    height: auto;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,9 +55,7 @@ body {
 }
 
 
-.logo-container>h2 {
-    color: var(--color)
-}
+
 
 .logo-container>h3 {
     margin: 1vw;
@@ -67,18 +76,53 @@ body {
 .form>.textbox {
     display: inline-flex;
     flex-direction: row;
-    row-gap: 5em;
+    column-gap: 1em;
+    width: 100%;
 }
 
-.form>.textbox>input {
-    width: 100%;
-    margin: 0em 2em 0em 0em;
-    
+
+input {
+    width: 85%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 4px #cdc8c8,
+        inset 0 0 4px #cccaca,
+        0 0 3px #f0e3e3,
+        0 0 3px #e1dede;
+}
+
+
+button {
+    width: 15%;
+    background-color: var(--color);
+    border-color: transparent;
+    border-radius: 4px;
+    color: whitesmoke;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid var(--color);
+    background-color: whitesmoke;
+    color: rgb(59, 58, 58)
 }
 
 .instruction {
     width: 100%;
-    margin: 10px;
-    text-align: center;
+    margin: 10px 0px 10px 0px;
     color: var(--gray)
+}
+
+.instruction p {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.Category h3 {
+    margin: 2px;
+    padding: 2px;
 }
