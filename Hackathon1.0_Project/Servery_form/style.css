@@ -32,7 +32,7 @@ body::before {
     width: 100%;
     z-index: -1;
     background: var(--color-darkblue);
-    background-image: linear-gradient(115deg,
+    background-image: linear-gradient(180deg,
             rgba(58, 58, 158, 0.8),
             rgba(136, 136, 206, 0.7)),
         url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn7DC8Pkzctdn2SBW6ahzSA0nH794KHVq1Fw&usqp=CAU);
