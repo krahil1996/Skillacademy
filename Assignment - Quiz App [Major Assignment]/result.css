@@ -11,7 +11,7 @@
     padding: 0;
 
 }
-
+/* All span tag styling */
 span {
     text-align: center;
     font-weight: 400;
@@ -24,7 +24,7 @@ body {
     height: 100%;
     background-color: var(--bodyColor);
 }
-
+/* main container */
 .main-3 {
     width: 60%;
     height: fit-content;
@@ -42,7 +42,7 @@ body {
 
     border-radius: 5px;
 }
-
+/* h2 of main of div */
 .main-3>div>h2 {
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ body {
     margin: 1%;
     padding: 1%;
 }
-
+/* result details container */
 .result-details {
     display: grid;
     grid-auto-columns: auto;
@@ -68,7 +68,7 @@ h3 {
     padding: 3px;
 }
 
-
+/* button styling */
 .btn-4 {
     display: grid;
     grid-template-columns: auto auto;
@@ -89,10 +89,11 @@ button {
     border-radius: 50px;
     color: white;
 }
-
+/* button hover effect */
 button:hover {
     color: black;
     font-weight: bolder;
     size: 5px;
     background-color: #41b3e8d4;
 }
+/* end of code */
