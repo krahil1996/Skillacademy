@@ -13,6 +13,7 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
             </style>
+        
     </head>
     <body>
         <!-- main container -->
@@ -21,15 +22,15 @@
             <div class="main">
                 <div class="logo-container">
                     <img style="height: 100px;" src="/test book logo.png" alt>
-                    <h2>Hello user!</h2>
+                    <h2 value=" document.write(username);">Hello user!</h2>
                     <h3 style="font-size: 1rem;">Enter Your Name to Continue the
                         Quiz.</h3>
                 </div>
-                <div class="form">
+                <form action="/Quiz.html" class="form">
                     <div class="textbox">
-                        <input type="text" name="textbox" id="textbox" required
-                            placeholder="ENTER YOUR NAME...">
-                        <button onclick = "window.location.href='Quiz.html'" class="btn1" type="submit">ENTER</button>
+                        <input type="text" name="name" id="username"
+                            placeholder="ENTER YOUR NAME..." required>
+                        <button class="btn1" type="submit">ENTER</button>
                     </div>
                     <div class="instruction">
                         <p>You'll have 10 seconds to answer each questions</p>
@@ -38,18 +39,44 @@
                     <!-- category section -->
                     <div class="Category">
                         <h2>Select Category</h2>
+                        <!-- <div class="category-options" >
+                            <button class="btn" name="btngroup" type="radio">Pipes And Cisterns </button>
+                            <button class="btn" name="btngroup" type="radio">Probability</button>
+                            <button class="btn" name="btngroup" type="submit">Problems On Age</button>
+                            <button class="btn" name="btngroup" type="submit">Profit And Loss</button>
+                        </div> -->
                         <div class="category-options">
-                            <button class="btn" type="submit">Pipes And Cisterns</button>
-                            <button class="btn" type="submit">Probability</button>
-                            <button class="btn" type="submit">Problems On Age</button>
-                            <button class="btn" type="submit">Profit And Loss</button>
+                            <input type="radio" name="btngroup"
+                                value="Pipes And Cisterns" id="one" required><label
+                                for="one">Pipes And Cisterns</label>
+                            <input type="radio" name="btngroup"
+                                value="Probability" id="two" required><label
+                                for="two">Probability</label>
+                            <input type="radio" name="btngroup"
+                                value="Problems On Age" id="three" required><label
+                                for="three">Problems On Age</label>
+                            <input type="radio" name="btngroup"
+                                value="Profit And Loss" id="four" required><label
+                                for="four">Profit And Loss</label>
                         </div>
                     </div>
-                </div>
+                </form>
 
             </div>
 
         </div>
 
     </body>
+<script>
+
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var name = url.searchParams.get("name");
+        var btngroup = url.searchParams.get("btngroup");
+
+        document.getElementsByTagName("h3").innerHTML = btngroup;
+
+        // var data1 = document.getElementsByName("btngroup").values;
+        // var data2 = document.getElementsByName("name").values;
+    </script>
 </html>

@@ -20,7 +20,8 @@
             <!-- selected catogery by the user Section -->
             <div class="main-2">
                 <div>
-                    <h3>Pips and Cisterns</h3>
+                    <h3 id="selected-catogery-by-user"></h3> 
+                
                 </div>
                 <!-- show timer and live score -->
                 <div class="T-S">
@@ -37,6 +38,7 @@
                         Consequatur maiores voluptatibus temporibus tempore
                         autem maxime quae neque possimus impedit magni ad iusto
                         itaque pariatur.</p>
+                        
                 </div>
                 <!-- Answere options -->
                 <div class="options">
@@ -50,4 +52,17 @@
 
         </div>
     </body>
+    <script>
+
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var name = url.searchParams.get("name");
+        var btngroup = url.searchParams.get("btngroup");
+
+        document.getElementsByTagName("h3").innerHTML = btngroup;
+        document.getElementById('selected-catogery-by-user').innerHTML = btngroup;
+
+        // var data1 = document.getElementsByName("btngroup").values;
+        // var data2 = document.getElementsByName("name").values;
+    </script>
 </html>

@@ -161,4 +161,34 @@ input {
     cursor: pointer;
 
 }
+
+.category-options>.btn:active {
+    background-color: var(--color);
+
+}
+
+input[type='radio'][name='btngroup'] {
+    display: none;
+}
+
+label {
+    font-size: 13px ;
+    text-align: center;
+    margin: 2px;
+    padding: 10px;
+    width: 100%;
+    
+    background-color: rgba(83, 189, 235, 0.2);
+    border: 2px solid var(--color);
+    border-radius: 4px;
+    color: var(--gray);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type='radio'][name='btngroup']:checked+label {
+    background-color: var(--color);
+}
+
+
 /* End of code */
