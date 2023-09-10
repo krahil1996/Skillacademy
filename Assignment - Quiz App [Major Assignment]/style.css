@@ -35,7 +35,7 @@ body {
 /* UserDetailsSection */
 .main {
     width: 60%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -177,7 +177,6 @@ label {
     margin: 2px;
     padding: 10px;
     width: 100%;
-    
     background-color: rgba(83, 189, 235, 0.2);
     border: 2px solid var(--color);
     border-radius: 4px;
