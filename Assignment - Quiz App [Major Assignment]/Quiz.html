@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="/quiz.css">
-        <script src="/jscript.js"></script>
+
         <title>|Quiz App|</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
@@ -21,6 +21,7 @@
             <div class="main-2">
                 <div>
                     <h3 id="selected-catogery-by-user"></h3>
+                    <h3 id="demo"></h3>
                     <!-- show timer and live score -->
                     <div class="T-S">
                         <h2 class="timer">220</h2>
@@ -59,7 +60,7 @@
                             class="btn-2"
                             for="four">15/2 HRS</label>
                     </div>
-                    <div class="submit" >
+                    <div class="submit">
                         <button value="submit" id="save">Next Question</button>
                     </div>
 
@@ -67,15 +68,5 @@
 
             </div>
         </body>
-        <script>
-
-        var url_string = window.location;
-        var url = new URL(url_string);
-        var name = url.searchParams.get("name");
-        var btngroup = url.searchParams.get("btngroup");
-
-        document.getElementsByTagName("h3").innerHTML = btngroup;
-        document.getElementById('selected-catogery-by-user').innerHTML = btngroup;
-
-       </script>
+        <script language="javascript" type="text/javascript" src="jscript.js"></script>
     </html>
