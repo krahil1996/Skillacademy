@@ -1,5 +1,3 @@
-const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/MongoDBtest')
-.then(()=> console.log('Database is connected'))
-.catch(()=> console.log ('Problem Occur while connecting Database'));
-
+const { log } = require('console');
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost:27017").then(()=> console.log('db connected')).catch(()=> ('error'));

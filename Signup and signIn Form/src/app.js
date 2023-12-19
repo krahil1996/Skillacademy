@@ -3,8 +3,8 @@ const app = express();
 const port = 3500;
 const path = require('path');
 const hbs = require('hbs');
-require("./db/conn"); 
-const registerUser= require('./models/register',)
+require('./db/conn')
+const registerUser= require('./models/register');
 const static_path = path.join(__dirname, '../Public');
 const template_path = path.join(__dirname, '../Template/Views');
 const partials_path = path.join(__dirname, "../Template/Partials");
@@ -41,5 +41,6 @@ app.get("/register", (req, res) => {
 // server start
 app.listen(port,()=>{
     console.log(`Server is Started at port ${port}`)
+  
 });
 
