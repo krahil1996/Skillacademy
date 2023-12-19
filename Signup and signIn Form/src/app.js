@@ -21,7 +21,8 @@ app.get('/', (req,res)=>{
 app.get("/login", (req, res) => {
   res.render('login');
 });
-//4758027623  01-01-1999
+
+
 app.get("/register", (req, res) => {
   res.render('register');
 });
