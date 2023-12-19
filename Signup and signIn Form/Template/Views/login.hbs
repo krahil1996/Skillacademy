@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JWT</title>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="icon" type="image/x-icon"
-            href="https://user-images.githubusercontent.com/5418178/177059352-fe91dcd5-e17b-4103-88ae-70d6d396cf85.png">
-    </head>
-    <body>
-        {{!-- partials --}}
-        {{>navbar}}
-        {{>footer}}
-        {{!-- Form --}}
-    <form class="box">
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-      <input class="input" type="email" placeholder="e.g. alex@example.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWT</title>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet "
+      href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="icon" type="image/x-icon"
+      href="https://user-images.githubusercontent.com/5418178/177059352-fe91dcd5-e17b-4103-88ae-70d6d396cf85.png">
+  </head>
+  <body>
+    {{!-- partials --}}
+    {{>navbar}}
+    {{!-- Form --}}
+    <div class="container is-max-desktop">
+      <div class=" box " style="margin: 2% 2%;">
+        <div class="box" style="font-size: xx-large; ">
+          <h1 style="text-align: center;"><strong>Login</strong></h1><hr>
+          <form action="/register" method="POST">
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left">
+                <input class="input" type="email" id="email"
+                  name="email"
+                  placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control has-icons-left">
+                <input class="input" id="password" name="password"
+                  type="password"
+                  placeholder="password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Login</button>
+              </div>
+              <div class="control">
+                <button class="button is-primary">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="field">
-    <label class="label">Password</label>
-    <div class="control">
-      <input class="input" type="password" placeholder="********">
-    </div>
-  </div>
-
-  <button class="button is-primary">Sign in</button>
-</form>
-    </body>
-
+  </body>
+  {{>footer}}
 </html>
