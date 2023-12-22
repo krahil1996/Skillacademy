@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const port = 3500;
+const port = 3600;
 const path = require("path");
 const hbs = require("hbs");
 require("./db/conn");
-// var popup = require("popups");
+
 const signupusers = require("./models/register");
 const static_path = path.join(__dirname, "../Public");
 const template_path = path.join(__dirname, "../Template/Views");
@@ -29,9 +29,10 @@ app.get("/register", (req, res) => {
 app.post("/register", async (req, res) => {
   try {
     const { firstname, lastname, email, gender, password, confirmpassword } =
-      req.body;
+      req.body; 
     // console.log('details', firstname);
     if (password === confirmpassword) {
+      
       const signupusersDetails = new signupusers({
         firstname: firstname,
         lastname: lastname,
@@ -42,19 +43,15 @@ app.post("/register", async (req, res) => {
       });
       const savingsignupusersDetails = await signupusersDetails.save();
       console.log("after saving", savingsignupusersDetails);
-      res.send("succesful");
+      res.send('succesful')
     } 
     else {
-      popup.alert({
-        content: "Hello!",
-      });popup.alert({
-        content: "Hello!",
-      });
-        //console.log("ddhbhjdbjh")
-        //alert('Hello! I am an alert box!!');
-      
+      const err = [];
+        err.push( {msg: "passwords do not match!! "});
+        
     }
-  } catch (error) {
+  } 
+  catch (error) {
     console.log(error);
   }
 });
