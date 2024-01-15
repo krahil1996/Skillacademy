@@ -104,7 +104,7 @@ body {
 }
 
 /* answere button styling */
-.options>.btn-2 {
+.options>.Qoptions {
     width: 100%;
     height: 3em;
     background-color: rgb(252, 252, 252);
@@ -115,7 +115,7 @@ body {
     cursor: pointer;
 }
 
-.btn-2:hover {
+.Qoptions:hover {
     background-color: var(--color);
     border: 2px solid var(--gray);
 

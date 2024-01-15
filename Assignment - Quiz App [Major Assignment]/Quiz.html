@@ -15,56 +15,43 @@
             </style>
     </head>
     <body>
+       
         <!-- main container -->
         <div class="contianer-2">
             <!-- selected catogery by the user Section -->
             <div class="main-2">
                 <div>
-                    <h3 id="selected-catogery-by-user"></h3>
+                    <h3 id="Que_type_Name"></h3>
                     <!-- show timer and live score -->
                     <div class="T-S">
-                        <h2 class="timer">220</h2>
-                        <h2 class="score" id="score">SCORE: 1</h2>
+                        <h2 class="timer" id="timer">0</h2>
+                        <span>Score:<h2 class="score" id="score"></h2></span> 
                     </div>
                     <!-- show Attempted questions out of total questions -->
                     <div class="q-no">
-                        <h3>4/10</h3>
+                        <h3 id="que_number">/10</h3>
                     </div>
                     <!-- Questions -->
                     <div class="qbox">
-                        <p id="ques">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officiis explicabo expedita, aliquam ab ut maxime dolorem minima porro excepturi beatae ex iste temporibus, debitis distinctio? Officia nobis dolores at, asperiores culpa illum quos magni impedit pariatur maiores, aliquam deleniti nemo ad voluptatibus itaque, excepturi unde sequi consequuntur repellendus enim.</p>
+                        <p id="QuesBox"></p>
 
                     </div>
                     <!-- Answere options -->
-                    <div class="options" id=opt>
-                        <input class="btn-2" type="radio" name="btngroup" id=opt
-                            value="Pipes And Cisterns" id="one" required><label
-                            class="btn-2"
-                            for="one">6 HRS</label>
-                        <input class="btn-2" type="radio" name="btngroup"
-                            value="Probability" id="two" required><label
-                            class="btn-2"
-                            for="two">20/3 HRS</label>
-                        <input class="btn-2" type="radio" name="btngroup"
-                            value="Problems On Age" id="three" required><label
-                            class="btn-2"
-                            for="three">7 HRS</label>
-                        <input class="btn-2" type="radio"
-                            name="btngroup"
-                            value="Profit And Loss" id="four" required><label
-                            class="btn-2"
-                            for="four">15/2 HRS</label>
+                    <div class="options">
+                        <input class="Qoptions" name="btngroup" type="radio" value="a" onclick="check_answer()" name="option" id="option1"><label id="a" for="option1">6 HRS</label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="b" onclick="check_answer()" name="option" id="option2"><label id="b" for="option2">6 HRS</label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="c" onclick="check_answer()" name="option" id="option3"><label id="c" for="option3">6 HRS</label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="d" onclick="check_answer()" name="option" id="option4"><label id="d" for="option4">6 HRS</label>
                     </div>
                     <div class="submit">
-                        <button onclick="nextques()" value="submit" id="save">Next
-                            Question</button>
+                        <button onclick="submitQuiz()">Next Question</button>
                     </div>
-
                 </div>
-
             </div>
+            <div id="resultpage"></div>
+             <script src="app.js"></script>
         </body>
-        
+       
 
 
     </html>
