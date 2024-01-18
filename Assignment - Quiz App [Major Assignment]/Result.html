@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="/result.css">
-        <script src="/jscript.js"></script>
+        
         <title>|Quiz App|</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
@@ -24,8 +24,9 @@
                 </div>
                 <!-- Result details -->
                 <div class="result-details">
-                    <h3 id="name"> <span>Your result is: </span></h3>
-                    <span>Total Time Taken:<h3 id="time_taken"> <span>seconds</span></h3></span>
+                    
+                    <h3 id="name"></h3> <span>Your result is: </span>
+                    <span>Total Time Taken:<h3 name="time_taken"> <span>seconds</span></h3></span>
                     <span>Total Question:<h3>10</h3></span>
                     <span>Attempt:<h3 id="Attempt">10</h3></span>
                     <span>Correct:<h3 id="Correct">3</h3></span>
@@ -52,7 +53,7 @@
         //////////////////function to show result//////////////
         result = () => {
             document.getElementById("time_taken").innerText =Time;
-            document.getElementById("name").innerText = name;
+            document.getElementById("name").innerText = Name;
             document.getElementById("Correct").innerText = correct;
             document.getElementById("wrong").innerText = wrong;
             document.getElementById("Attempt").innerText = attempted;
@@ -76,5 +77,6 @@
 
         result();
     </script>
+    <script src="app.js"></script>
     </body>
 </html>

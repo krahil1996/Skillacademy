@@ -475,7 +475,7 @@ const check_answer = () => {
     document.getElementById(correct_option).style.backgroundColor = "green";
   }
 
-  document.getElementById("options").style.pointerEvents = "none";
+  document.getElementsById("option").style.pointerEvents = "none";
 };
 
 Qtype = localStorage.getItem("type");

@@ -20,7 +20,7 @@
         <div class="contianer-2">
             <!-- selected catogery by the user Section -->
             <div class="main-2">
-                <div>
+                <div style="width: 90%;">
                     <h3 id="Que_type_Name"></h3>
                     <!-- show timer and live score -->
                     <div class="T-S">
@@ -29,7 +29,7 @@
                     </div>
                     <!-- show Attempted questions out of total questions -->
                     <div class="q-no">
-                        <h3 id="que_number">/10</h3>
+                        <h3 id="que_number"><span>/10</span></h3>
                     </div>
                     <!-- Questions -->
                     <div class="qbox">
@@ -37,11 +37,11 @@
 
                     </div>
                     <!-- Answere options -->
-                    <div class="options">
-                        <input class="Qoptions" name="btngroup" type="radio" value="a" onclick="check_answer()" name="option" id="option1"><label id="a" for="option1">6 HRS</label>
-                        <input class="Qoptions" name="btngroup" type="radio" value="b" onclick="check_answer()" name="option" id="option2"><label id="b" for="option2">6 HRS</label>
-                        <input class="Qoptions" name="btngroup" type="radio" value="c" onclick="check_answer()" name="option" id="option3"><label id="c" for="option3">6 HRS</label>
-                        <input class="Qoptions" name="btngroup" type="radio" value="d" onclick="check_answer()" name="option" id="option4"><label id="d" for="option4">6 HRS</label>
+                    <div class="options" id="option">
+                        <input class="Qoptions" name="btngroup" type="radio" value="a" onclick="check_answer()" name="option" id="option1"><label id="a" for="option1"></label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="b" onclick="check_answer()" name="option" id="option2"><label id="b" for="option2"></label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="c" onclick="check_answer()" name="option" id="option3"><label id="c" for="option3"></label>
+                        <input class="Qoptions" name="btngroup" type="radio" value="d" onclick="check_answer()" name="option" id="option4"><label id="d" for="option4"></label>
                     </div>
                     <div class="submit">
                         <button onclick="submitQuiz()">Next Question</button>
