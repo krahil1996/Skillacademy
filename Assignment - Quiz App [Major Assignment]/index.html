@@ -44,12 +44,7 @@
           <!-- category section -->
           <div class="Category">
             <h2>Select Category</h2>
-            <p id="no_type" style="color: rgb(236, 55, 55); text-align: center;" id="no_name"></p>
-            
-<<<<<<< HEAD
-            
-=======
->>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
+
             <div class="category-options" aria-required="true">
               <input
                 class="option"
@@ -88,54 +83,14 @@
         </form>
       </div>
     </div>
-    <script>
-<<<<<<< HEAD
+  </body>
+
+  <script
+    language="javascript"
+    type="text/javascript"
+    src="jscript.js"
+  ></script>
+
+
     
-      
-=======
->>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
-            const option = document.querySelectorAll('.option')
-            // //////////function to get question type/////////
-            const queType = () => {
-
-
-                option.forEach(
-                    (input) => {
-                        if (input.checked) {
-                            localStorage.setItem('type', input.value);
-                            let question_Type = localStorage.getItem('type');
-                            console.log(question_Type)
-                        }
-                    }
-                )
-            
-                let name = document.getElementById("name").value;
-                name=localStorage.setItem('name', name);
-                const check =localStorage.getItem('name');
-              
-
-
-                if(check!=""){
-                   const Q = localStorage.getItem('type');
-                   
-                    if(Q!=""){
-                        window.location.href = 'Quiz.html';
-                    }
-                    else{
-                        
-                        document.getElementById("no_type").innerHTML=("Please Select Question Type");
-                    }
-                }
-               
-                return ;
-            }
-
-            localStorage.setItem('name', name);
-           const Q= localStorage.setItem('type',"");
-        </script>
-<<<<<<< HEAD
-        
-=======
->>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
-  </body>    
 </html>
