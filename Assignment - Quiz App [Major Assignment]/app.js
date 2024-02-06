@@ -165,7 +165,11 @@ const Probability = [
     }
 ]
 
+<<<<<<< HEAD
 const Problems_on_Age = [
+=======
+let Problems_on_Age = [
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
     {
         'que': 'The sum of the present ages of John and Lisa is 48. Five years ago, John was three times as old as Lisa. What is Lisas present age?',
 'a': '12 years',
@@ -248,7 +252,11 @@ const Problems_on_Age = [
     }
 ]
 
+<<<<<<< HEAD
 const Profit_And_Loss = [
+=======
+let Profit_And_Loss = [
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
     {
         'que': 'A shopkeeper sells a shirt for ₹500, making a profit of 25%. What was the cost price of the shirt?',
         'a': '₹400',
@@ -331,6 +339,12 @@ const Profit_And_Loss = [
     }
 ]
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 let option;
 let correct_option;
 let total = 10;
@@ -346,9 +360,13 @@ const score = document.getElementById("score");
 const Que_type = document.getElementById("Que_type_Name");
 const QuesBox = document.getElementById("QuesBox");
 const que_number = document.getElementById("que_number");
+<<<<<<< HEAD
 const options = document.querySelectorAll(".Qoptions");
 
 
+=======
+const options = document.querySelectorAll(".options");
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 
 //          function to load questions
 var timer = setInterval(() => {
@@ -368,10 +386,17 @@ const loadquestion = () => {
   reset();
 
   //          if condition to print the question type
+<<<<<<< HEAD
    if (Qtype === "Pipes And Cisterns") var data = Pipes_And_cisterns[index];
    else if (Qtype === "Probability") var data = Probability[index];
    else if (Qtype === "Problems_on_Age") var data = Problems_on_Age[index];
    else if (Qtype == "Profit_And_Loss") var data = Profit_And_Loss[index];
+=======
+  if (Qtype == 1) var data = Pipes_And_cisterns[index];
+  else if (Qtype == 2) var data = Probability[index];
+  else if (Qtype == 3) var data = Problems_on_Age[index];
+  else if (Qtype == 4) var data = Profit_And_Loss[index];
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 
   correct_option = data.correct;
   QuesBox.innerText = `${data.que}`;
@@ -382,15 +407,25 @@ const loadquestion = () => {
   options[1].nextElementSibling.innerText = data.b;
   options[2].nextElementSibling.innerText = data.c;
   options[3].nextElementSibling.innerText = data.d;
+<<<<<<< HEAD
   
+=======
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 };
 
 //          submit button
 const submitQuiz = () => {
+<<<<<<< HEAD
   if (Qtype === "Pipes And Cisterns") var data = Pipes_And_cisterns[index];
   else if (Qtype === "Probability") var data = Probability[index];
   else if (Qtype === "Problems_on_Age") var data = Problems_on_Age[index];
   else if (Qtype == "Profit_And_Loss") var data = Profit_And_Loss[index];
+=======
+  if (Qtype == 1) var data = Pipes_And_cisterns[index];
+  else if (Qtype == 2) var data = Probability[index];
+  else if (Qtype == 3) var data = Problems_on_Age[index];
+  else if (Qtype == 4) var data = Profit_And_Loss[index];
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 
   let ans = getAnswer();
   if (ans == data.correct) {
@@ -407,7 +442,11 @@ const submitQuiz = () => {
   document.getElementById("d").style.backgroundColor = "rgba(27, 145, 255,0.3)";
   loadquestion();
 
+<<<<<<< HEAD
   document.getElementById("Qoptions").style.pointerEvents = "all";
+=======
+  document.getElementById("option").style.pointerEvents = "all";
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
   seconds = 10;
 
   return;
@@ -415,10 +454,17 @@ const submitQuiz = () => {
 
 //          fuction question type name
 const Q_Type_Heading = () => {
+<<<<<<< HEAD
   if (Qtype === "Pipes And Cisterns") Que_type.innerText = "Pipes And Cisterns";
   else if (Qtype === "Probability") Que_type.innerText = "Probability";
   else if (Qtype === "Problems_on_Age") Que_type.innerText = "Problems_on_Age";
   else if (Qtype === "profit_And_Loss") Que_type.innerText = "profit_And_Loss";
+=======
+  if (Qtype == 1) Que_type.innerText = "Pipes And Cisterns";
+  else if (Qtype == 2) Que_type.innerText = "Probability";
+  else if (Qtype == 3) Que_type.innerText = "Problems_on_Age";
+  else if (Qtype == 4) Que_type.innerText = "rofit_And_Loss";
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 };
 
 //          function to check selection
@@ -465,7 +511,11 @@ const check_answer = () => {
       selected_option = opt.value;
     }
   });
+<<<<<<< HEAD
   console.log(selected_option);
+=======
+  // console.log(selected_option);
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 
   let selected_element = document.getElementById(selected_option);
   if (selected_option == correct_option)
@@ -475,15 +525,26 @@ const check_answer = () => {
     document.getElementById(correct_option).style.backgroundColor = "green";
   }
 
+<<<<<<< HEAD
   document.getElementsById("option").style.pointerEvents = "none";
+=======
+  document.getElementById("options").style.pointerEvents = "none";
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 };
 
 Qtype = localStorage.getItem("type");
 
+<<<<<<< HEAD
 if (Qtype === "Pipes_And_cisterns") var no_of_questions = Pipes_And_cisterns.length;
 else if (Qtype === "Probability") var no_of_questions = Probability.length;
 else if (Qtype === "Problems_on_Age") var no_of_questions = Problems_on_Age.length;
 else if (Qtype === "Profit_And_Loss") var no_of_questions = Profit_And_Loss.length;
+=======
+if (Qtype == 1) var no_of_questions = Pipes_And_cisterns.length;
+else if (Qtype == 2) var no_of_questions = Probability.length;
+else if (Qtype == 3) var no_of_questions = Problems_on_Age.length;
+else if (Qtype == 4) var no_of_questions = Profit_And_Loss.length;
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
 
 localStorage.setItem("no_of_questions", no_of_questions);
 

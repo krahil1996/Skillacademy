@@ -24,8 +24,12 @@
                 </div>
                 <!-- Result details -->
                 <div class="result-details">
+<<<<<<< HEAD
                     
                     <h3 id="name"></h3> <span>Your result is:</span>
+=======
+                    <h3 id="name"> <span>Your result is: </span></h3>
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
                     <span>Total Time Taken:<h3 id="time_taken"> <span>seconds</span></h3></span>
                     <span>Total Question:<h3>10</h3></span>
                     <span>Attempt:<h3 id="Attempt">10</h3></span>
@@ -46,14 +50,22 @@
         let Time = localStorage.getItem('time');
         let no_of_questions = localStorage.getItem('no_of_questions');
         Time = 10 * no_of_questions - Time;
+<<<<<<< HEAD
         let Name = localStorage.getItem('name');
+=======
+        let Name = localStorage.getItem('Name');
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
         let correct = localStorage.getItem('no_of_correct_answers');
         let wrong = localStorage.getItem('no_of_wrong_answers');
         let attempted = localStorage.getItem('no_of_questions_attempted');
         //////////////////function to show result//////////////
         result = () => {
             document.getElementById("time_taken").innerText =Time;
+<<<<<<< HEAD
             document.getElementById("name").innerText = Name;
+=======
+            document.getElementById("name").innerText = name;
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
             document.getElementById("Correct").innerText = correct;
             document.getElementById("wrong").innerText = wrong;
             document.getElementById("Attempt").innerText = attempted;
@@ -77,6 +89,9 @@
 
         result();
     </script>
+<<<<<<< HEAD
     <script src="app.js"></script>
+=======
+>>>>>>> 0b2499e56a09a2415a697608779487c1aa653604
     </body>
 </html>
