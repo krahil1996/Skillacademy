@@ -10,156 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #436850;
-            color: rgb(255, 253, 253);
-            font-family: 'Poppins', sans-serif;
-        }
 
-        nav {
-            background-color: #265243;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            border-bottom: #22382a 1px solid;
-
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-            /* font-size: 2rex;
-            font-weight: 500; */
-
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            transition: all;
-
-        }
-
-        nav ul li a:hover {
-            color: lavender;
-            font-size: 1.04rem;
-            border-bottom: 5px solid rgb(178, 219, 96);
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-            transition: all 0.1s ease-in-out;
-
-        }
-
-        .left {
-            font-size: 2em;
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-        }
-
-        .firstSection>div {
-            width: 40%;
-        }
-
-        .leftsection {
-            /* background-color: #ADBC9F; */
-            font-size: 3rem;
-            margin: 20px 0;
-        }
-
-        .rightsection img {
-            width: 80%;
-            margin: 20px 0;
-
-        }
-
-
-        .text-purple {
-            color: #dddca2;
-        }
-
-        #element {
-            color: #dddca2;
-        }
-
-        main hr {
-            border: 0;
-            background-color: #22382a;
-            height: 1px;
-            margin: 20px 30px;
-        }
-
-        /* second section */
-
-        .secondsection {
-            max-width: 90vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .secondsection hr {
-            font-size: 1.5rem;
-        }
-
-        .text-gray {
-            color: gray;
-        }
-
-        .secondsection .box {
-            background-color: white;
-            width: 90vw;
-            height: 3px;
-            margin: 56px 0;
-            display: flex;
-            
-        }
-
-        .secondsection .box .vertical {
-            height: 93px;
-            width: 2px;
-            background-color: white;
-            margin: 0 12.45%;
-        }
-
-        .img-top {
-            width: 33px;
-            position: relative;
-            top: -31px;
-            left: -9px;
-        }
-
-        .vertical-titile {
-            position: relative;
-            top: 75px;
-            width: 150px;
-        }
-
-        .vertical-desc {
-            color: gray;
-            font-size: 10px;
-            position: relative;
-            top: 75px;
-            width: 160px;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <nav>
-
             <div class="left"> Rahil's Portfolio</div>
             <div class="right">
                 <ul>
@@ -179,8 +35,11 @@
                 <span>Hi,</span><br> My Name is <span class="text-purple"> <b>Rahil</b></span>
                 <div>and I am a passionate</div>
                 <span id="element"></span>
+                <div class="buttons">
+                    <a href="./documents/resume.pdf" target="_blank"><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/krahil1996"target="_blank"><button class="btn">Visit Github</button></a>
+                </div>
             </div>
-
             <div class="rightsection">
                 <img src="src/boy2.png" alt="image">
             </div>
@@ -193,44 +52,86 @@
             <div class="box">
                 <div class="vertical">
                     <img class="img-top" src="./src/flag.png" alt="">
-                    <div class="vertical-titile">HTML Developer (2010-2012)
+                    <div class="vertical-titile">Block Project Assistant (2017-2019)
                     </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quasi
-                        eius in dolores accusantium odio temporibus provident omnis nobis corporis.</div>
+                    <div class="vertical-desc">I have worked as a Block Project Assistant under the national Nutrition
+                        Mission Project of GoI.</div>
                 </div>
                 <div class="vertical">
+                    <img class="img-top" src="./src/flag.png" alt="">
+                    <div class="vertical-titile"> District Roll-out Manager/Project Manager (2021-Present)
+                    </div>
+                    <div class="vertical-desc">Currently I am Working in the role of District Roll-out Manager under
+                        the Intregeted Road Accident Database(iRAD) at National informatics Centre-NIC.</div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="./src/flag.png" alt="">
+                    <div class="vertical-titile">Full-Stack Developer (Fresher)
+                    </div>
+                    <div class="vertical-desc">Just Completed The Upskill course from SkillAcademy by Testbook.</div>
+                </div>
+                <!-- <div class="vertical">
                     <img class="img-top" src="./src/flag.png" alt="">
                     <div class="vertical-titile">HTML Developer (2010-2012)
                     </div>
                     <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quasi
                         eius in dolores accusantium odio temporibus provident omnis nobis corporis.</div>
-                </div>
-                <div class="vertical">
-                    <img class="img-top" src="./src/flag.png" alt="">
-                    <div class="vertical-titile">HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quasi
-                        eius in dolores accusantium odio temporibus provident omnis nobis corporis.</div>
-                </div>
-                <div class="vertical">
-                    <img class="img-top" src="./src/flag.png" alt="">
-                    <div class="vertical-titile">HTML Developer (2010-2012)
-                    </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quasi
-                        eius in dolores accusantium odio temporibus provident omnis nobis corporis.</div>
-                </div>
-                
+                </div> -->
+
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer">
+            <div class="first-footer">
+                <h1>Rahil's Developer Portfolio</h1>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                    <li>HOME</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-centre">
+            Copyright &copy 2017-2024 Rahil khan -All Rights Reserved.
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         let typed = new Typed('#element', {
-            strings: ['<b>Web Developer</b>', '<b>Full-Stack Developer (MERN)</b>', '<b>Freelancer </b>'],
+            strings: ['<b>Web Developer</b>', '<b>Freelancer</b>', '<b>Full-Stack Developer (MERN) </b>'],
             typeSpeed: 70,
         });
+
+
+        // document.getElementsByClassName('btn').onclick = function onclick (){
+        //     location.href="https://www.google.com/";
+        // };
+
     </script>
 </body>
 
