@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quiz Application " />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    
+    <title>|Quiz App|</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- <script src="app.js"></script> -->
+    <!-- main container -->
+    <div class="container">
+      <!-- user details section  -->
+      <div class="main">
+        <div class="logo-container">
+          <img style="height: 100px" src="/test book logo.png" alt />
+          <h2 value=" document.write(username);">Hello user!</h2>
+          <h3 style="font-size: 1rem">Enter Your Name to Continue the Quiz.</h3>
+        </div>
+        <form action="Quiz.html" class="form">
+          <div class="textbox">
+            <input
+              type="text"
+              id="name"
+              placeholder="ENTER YOUR NAME..."
+              required
+            />
+            <button  onclick="queType()" class="btn1" type="submit">ENTER</button>
+            
+          </div>
+          <div class="instruction">
+            <p>You'll have 10 seconds to answer each questions</p>
+            <hr />
+          </div>
+
+          <!-- category section -->
+          <div class="Category">
+            <h2>Select Category</h2>
+            <p id="no_type" style="color: rgb(236, 55, 55); text-align: center;" id="no_name"></p>
+            
+            
+            <div class="category-options" aria-required="true">
+              <input
+                class="option"
+                type="radio"
+                name="option"
+                value="Pipes And Cisterns"
+                id="one"
+                required
+              /><label for="one">Pipes And Cisterns</label>
+              <input
+              class="option"
+                type="radio"
+                name="option"
+                value="Probability"
+                id="two"
+                required
+              /><label for="two">Probability</label>
+              <input
+              class="option"
+                type="radio"
+                name="option"
+                value="Problems On Age"
+                id="three"
+                required
+              /><label for="three">Problems On Age</label>
+              <input
+              class="option"
+                type="radio"
+                name="option"
+                value="Profit And Loss"
+                id="four"
+                required
+              /><label for="four">Profit And Loss</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+    
+      
+            const option = document.querySelectorAll('.option')
+            // //////////function to get question type/////////
+            const queType = () => {
+
+
+                option.forEach(
+                    (input) => {
+                        if (input.checked) {
+                            localStorage.setItem('type', input.value);
+                            let question_Type = localStorage.getItem('type');
+                            console.log(question_Type)
+                        }
+                    }
+                )
+            
+                let name = document.getElementById("name").value;
+                name=localStorage.setItem('name', name);
+                const check =localStorage.getItem('name');
+              
+
+
+                if(check!=""){
+                   const Q = localStorage.getItem('type');
+                   
+                    if(Q!=""){
+                        window.location.href = 'Quiz.html';
+                    }
+                    else{
+                        
+                        document.getElementById("no_type").innerHTML=("Please Select Question Type");
+                    }
+                }
+               
+                return ;
+            }
+
+            localStorage.setItem('name', name);
+           const Q= localStorage.setItem('type',"");
+        </script>
+        
+  </body>    
+</html>

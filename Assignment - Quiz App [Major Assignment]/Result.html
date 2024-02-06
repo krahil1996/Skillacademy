@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Quiz Application ">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="/result.css">
+        
+        <title>|Quiz App|</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+            </style>
+    </head>
+    <body>
+        <!-- main container -->
+        <div class="contianer-3">
+            <!-- caption -->
+            <div class="main-3">
+                <div>
+                    <h2>Result</h2>
+                </div>
+                <!-- Result details -->
+                <div class="result-details">
+                    
+                    <h3 id="name"></h3> <span>Your result is:</span>
+                    <span>Total Time Taken:<h3 id="time_taken"> <span>seconds</span></h3></span>
+                    <span>Total Question:<h3>10</h3></span>
+                    <span>Attempt:<h3 id="Attempt">10</h3></span>
+                    <span>Correct:<h3 id="Correct">3</h3></span>
+                    <span>Wrong:<h3 id="wrong">7</h3></span>
+                    <span>Percentage:<h3 id="Percentage">30.00%</h3></span>
+                </div>
+                <!-- navigation button for user to start again and goto home -->
+                <div class="btn-4">
+                    <button onclick = "window.location.href='Quiz.html'" type="submit">Start Again</button>
+                    <button onclick = "window.location.href='index.html'" type="submit">Go to Home</button>
+                </div>
+                
+            </div>
+
+        </div>
+        <script>
+        let Time = localStorage.getItem('time');
+        let no_of_questions = localStorage.getItem('no_of_questions');
+        Time = 10 * no_of_questions - Time;
+        let Name = localStorage.getItem('name');
+        let correct = localStorage.getItem('no_of_correct_answers');
+        let wrong = localStorage.getItem('no_of_wrong_answers');
+        let attempted = localStorage.getItem('no_of_questions_attempted');
+        //////////////////function to show result//////////////
+        result = () => {
+            document.getElementById("time_taken").innerText =Time;
+            document.getElementById("name").innerText = Name;
+            document.getElementById("Correct").innerText = correct;
+            document.getElementById("wrong").innerText = wrong;
+            document.getElementById("Attempt").innerText = attempted;
+            document.getElementById("Percentage").innerText = correct * 10;
+
+        }
+        ////////////function for Go to home button///////////
+        const go_to_home = () => {
+            window.location.href = 'index.html';
+            window.localStorage.clear();
+        }
+        ////////////function for Start Again button///////////////
+        const startAgain = () => {
+            window.location.href = 'Quiz.html';
+            window.localStorage.removeItem('Time');
+            window.localStorage.removeItem('no_of_correct_answers');
+            window.localStorage.removeItem('no_of_wrong_answers');
+            window.localStorage.removeItem('no_of_questions_attempted');
+
+        }
+
+        result();
+    </script>
+    <script src="app.js"></script>
+    </body>
+</html>
