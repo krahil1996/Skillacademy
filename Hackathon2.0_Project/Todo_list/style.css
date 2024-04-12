@@ -1,10 +1,105 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --bodyBackground:#EEEEEE;
-    --fontColor:white;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: var(--bodyBackground);
+
+:root {
+  --bodyBackground: white;
+  --containerBG: #eeeeee;
+  --headbackground: linear-gradient(to bottom right, #66ccff 32%, #0066ff 100%);
+}
+
+body {
+  background: var(--containerBG);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 3rem auto;
+
+  width: 65rem;
+  border-radius: 0.5rem;
+  background: var(--headbackground);
+}
+
+.container > h1 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 70%;
+  color: var(--bodyBackground);
+  font-size: 3rem;
+  margin: 1rem auto;
+  transition: all 0.3ms;
+}
+form {
+  display: block;
+  width: 100%;
+}
+
+.form__input {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 1rem;
+  margin-left: 8%;
+  margin-right: -6rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  color: #2d2c2c;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2474ec;
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+  transition: all 0.3s;
+}
+
+.data_container {
+  display: block;
+  background: #ffffff;
+  border-radius: 0rem 0rem 0.4rem 0.4rem;
+}
+.data_container > h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+li {
+  margin: 1rem;
+  padding: 1rem;
+  margin-bottom: 10px;
+  list-style-type: none;
+  background: #eeeeee;
+}
+.task {
+  display: flex-;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+a {
 }
