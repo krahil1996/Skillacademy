@@ -13,24 +13,29 @@
   <div class="container">
     <h1>TODO LIST</h1>
     <form action="">
-      <input class="form__input" type="text" id="txt" placeholder="Type a task">
-      <button>ADD</button>
+      <input id="input-box" class="form__input" type="text" id="txt" placeholder="Type a task">
+      <button type="button" class="add-btn" onclick="addTask()">ADD</button>
     </form>
     <div class="data_container">
       <h1>List of Task</h1>
+      <P id="emt-msg"></P>
+      <p id="p-text">
+        The list is empty</p>
+      <ul id="taskList">
+        <!-- <li>Rahil Khan
+          <div>
+            <button class="t-btn">Update</button>
+            <button class="t-btn">Delete</button>
+          </div>
+        </li>
+        <li>Israil khan
+          <div>
+            <button class="t-btn">Update</button>
+            <button class="t-btn">Delete</button>
 
-      <div class="task">
-        <li>Rahil Khan
-          <a href="">Update</a>
-          <a href="">Delete</a>
-      </div>
-      </li>
-      <li>Israil khan
-        <div class="task">
-          <a href="">Update</a>
-          <a href="">Delete</a>
-        </div>
-      </li>
+          </div>
+        </li> -->
+      </ul>
 
     </div>
   </div>
@@ -39,5 +44,8 @@
 </body>
 
 <script src="index.js"></script>
+
+
+
 
 </html>

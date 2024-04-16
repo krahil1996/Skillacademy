@@ -1,26 +1,52 @@
+
 // Function to add a new task
+
+let inputbox = document.getElementById("input-box");
+let tasklist = document.getElementById("taskList");
+let emt_msg = document.getElementById("emt-msg");
+let instruction = document.getElementById('p-text');
 function addTask() {
-    var input = document.getElementById("taskInput");
-    var taskText = input.value.trim();
-    if (taskText === "") return; // Don't add empty tasks
-    var taskList = document.getElementById("taskList");
-    var li = document.createElement("li");
-    li.innerHTML = taskText + '<button onclick="editTask(this)">Edit</button> <button onclick="deleteTask(this)">Delete</button>';
-    taskList.appendChild(li);
-    input.value = ""; // Clear input field
-}
+    if (inputbox.value.trim() === '') {
+        // alert('Please enter the task name')
+        setTimeout(() => {
+            emt_msg.innerText = "Please Enter The Task"
+        }, 500);
 
-// Function to edit a task
-function editTask(button) {
-    var li = button.parentNode;
-    var newText = prompt("Edit task:", li.firstChild.textContent);
-    if (newText !== null) {
-        li.firstChild.textContent = newText;
     }
+
+    else {
+        let li = document.createElement("li");
+        li.innerHTML = `${inputbox.value}<div><button type=smbt class=t-btn onclick="editTask(this)">Update</button>
+        <button type=smbt class=t-btn onclick="deleteTask(this)">Delete</button>
+    </div>`;
+        taskList.appendChild(li);
+        instruction.innerText = ""
+        instruction.style.borderColor = "#463333";
+        instruction.style.borderStyle = "solid";
+        instruction.style.borderWidth = "2px";
+
+
+    }
+
+    inputbox.value = "";
+
+    setInterval(() => {
+        emt_msg.innerText = "";
+    }, 5000);
 }
 
-// Function to delete a task
-function deleteTask(button) {
-    var li = button.parentNode;
-    li.parentNode.removeChild(li);
+function emtyMsg() {
+
+}
+
+
+deleteTask = () => {
+    let tasklist = document.getElementById("taskList");
+    tasklist.removeChild(tasklist.lastChild);
+    if (tasklist.innerText === "") {
+        instruction.innerText = "The list is empty";
+        instruction.style.border = "none";
+    }
+
+
 }
