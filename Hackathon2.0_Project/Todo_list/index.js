@@ -16,15 +16,15 @@ function addTask() {
 
     else {
         let li = document.createElement("li");
+        li.id = "list";
         li.innerHTML = `${inputbox.value}<div><button type=smbt class=t-btn onclick="editTask(this)">Update</button>
         <button type=smbt class=t-btn onclick="deleteTask(this)">Delete</button>
     </div>`;
-        taskList.appendChild(li);
+        tasklist.appendChild(li);
         instruction.innerText = ""
         instruction.style.borderColor = "#463333";
         instruction.style.borderStyle = "solid";
         instruction.style.borderWidth = "2px";
-
 
     }
 
@@ -37,12 +37,13 @@ function addTask() {
 
 function emtyMsg() {
 
+
 }
 
 
 deleteTask = () => {
     let tasklist = document.getElementById("taskList");
-    tasklist.removeChild(tasklist.lastChild);
+
     if (tasklist.innerText === "") {
         instruction.innerText = "The list is empty";
         instruction.style.border = "none";

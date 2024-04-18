@@ -11,7 +11,7 @@
 
 body {
   /* background: var(--containerBG); */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   background: fixed linear-gradient(to top, #ccffff 0%, #ccffcc 100%);
 }
 .container {
@@ -49,7 +49,7 @@ form {
   width: 80%;
   margin: 1rem;
   margin-left: 8%;
-  margin-right: -6.5rem;
+  margin-right: -6.3rem;
   padding: 1rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
@@ -74,7 +74,7 @@ form {
 
 button:hover {
   transition: all 0.3s;
-  background-color: #565657;
+  background-color: #535355;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
@@ -82,7 +82,7 @@ button:hover {
 #emt-msg {
   text-align: center;
   font-size: 1.4rem;
-  color: #ca0a0a;
+  color: #eb2929;
   margin: 1rem;
   transition: all 0.6s ease-out;
 }
