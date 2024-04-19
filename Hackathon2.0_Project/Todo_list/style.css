@@ -65,6 +65,7 @@ form {
   color: #2d2c2c;
   font-size: 1rem;
   font-weight: bold;
+  width: 5rem;
   border: none;
   outline: none;
   border-radius: 0.3rem;
@@ -73,7 +74,6 @@ form {
 }
 
 button:hover {
-  transition: all 0.3s;
   background-color: #535355;
   color: #ffffff;
   transition: all 0.4s ease-in;
@@ -129,6 +129,7 @@ li {
   font-family: "Roboto", sans-serif;
   color: #333;
   font-size: 1.2rem;
+  width: 6rem;
   margin: 0.5rem;
   padding: 0.8rem;
   cursor: pointer;
