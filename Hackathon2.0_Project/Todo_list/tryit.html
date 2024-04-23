@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" placeholder="Enter Task" onfocus="this.value=''" id="myTask">
+    <button onclick="myFunction()">Try it</button>
+    <button onclick="deleteTask()">del it</button>
+
+    <ul id="myList">
+
+    </ul>
+
+
+
+    <script>
+        function myFunction() {
+
+            var node = document.createElement("LI");
+            var myTask = document.getElementById("myTask").value;
+            var textnode = document.createTextNode(myTask);
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
+            var btn = document.createElement("input");
+            var abcElements = document.querySelectorAll('LI');
+
+            for (var i = 0; i < abcElements.length; i++) {
+                abcElements[i].id = 'abc-' + i;
+            }
+            // node.setAttribute("id", "li1");
+            btn.setAttribute("type", "submit");
+            btn.setAttribute("value", "delete");
+            btn.setAttribute("id", "delete");
+            node.appendChild(btn);
+            btn.addEventListener('click', () => {
+                // console.log("OK");
+                document.getElementById("abc-" + i).parentNode.removeChild(document.getElementById("abc-" + i))
+
+            })
+
+        }
+
+        function deleteTask() {
+            var i = 65;
+            var item = document.getElementsByTagName("LI")[i];
+            i++;
+            item.parentNode.removeChild(item);
+        }
+
+    </script>
+</body>
+
+</html>
