@@ -55,6 +55,7 @@
     let input = document.getElementById("input-box").value;
     let inputText = document.createTextNode(input);
     let emptyWarning = document.getElementById("emt-msg")
+    let listEmpty = document.getElementById("p-text");
     if (input === "") {
       // alert('Please enter the task name')
       setTimeout(() => {
@@ -65,10 +66,38 @@
         emptyWarning.innerText = "";
       }, 5000);
     } else {
+      listEmpty.innerText = "";
+      document.getElementById("input-box").value = "";
       let TaskList = document.createElement("li");
       TaskList.appendChild(inputText);
       document.getElementById("taskList").appendChild(TaskList);
-      let btn = document.createElement("button");
+      let div = document.createElement("Div");
+      TaskList.appendChild(div);
+      let btn1 = document.createElement("BUTTON");
+      let btnText1 = document.createTextNode("Edit")
+      let btn2 = document.createElement("BUTTON");
+      let btnText2 = document.createTextNode("Delete")
+      let listEle = document.querySelectorAll("LI");
+      for (let i = 0; i < listEle; i++) {
+        listEle[i].id = `list- ${i}`;
+      }
+
+
+      TaskList.setAttribute("id", listEle);
+      btn1.appendChild(btnText1);
+      btn1.setAttribute("type", "submit");
+      btn1.setAttribute("id", "delete");
+      btn1.setAttribute("class", "t-btn");
+      btn2.appendChild(btnText2);
+      btn2.setAttribute("type", "submit");
+      btn2.setAttribute("id", "delete");
+      btn2.setAttribute("class", "t-btn");
+      div.appendChild(btn1,);
+      div.appendChild(btn2,);
+
+
+
+
 
     }
 

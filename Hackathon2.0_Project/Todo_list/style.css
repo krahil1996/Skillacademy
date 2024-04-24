@@ -27,8 +27,9 @@
 /* body */
 body {
   /* background: var(--containerBG); */
-
-  background: fixed linear-gradient(to top, #ccffff 0%, #ccffcc 100%);
+  overflow: auto;
+  height: 60vh;
+  background: fixed linear-gradient(to top, #9bd7d7 0%, #96e096 100%);
 }
 .container {
   display: flex;
@@ -36,9 +37,9 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  margin: 10rem auto;
-  /* width: 70%; */
-  max-width: 60rem;
+  margin: 6rem auto;
+  /* max-width: 115ch; */
+  max-width: 80vw;
   box-shadow: 5px 7px 10px rgb(155, 155, 155);
   border-radius: 0.5rem;
   background: var(--headbackground);
@@ -51,7 +52,7 @@ body {
   color: var(--bodyBackground);
   text-shadow: 3px 3px #333335;
   font-size: 4rem;
-  margin: 3rem auto;
+  margin: 2rem auto;
   transition: all 0.3s ease-in;
 }
 form {
@@ -72,7 +73,7 @@ form {
   background-color: rgb(255, 255, 255);
   border: none;
   outline: none;
-  border-bottom: 0.3rem solid rgb(52, 52, 53);
+  border-bottom: 0.3rem solid rgb(51, 51, 223);
 }
 
 .form__input ~ button {
@@ -89,7 +90,7 @@ form {
 }
 
 button:hover {
-  background-color: #535355;
+  background-color: #464647;
   color: #ffffff;
   transition: all 0.3s ease-in;
 }
@@ -111,6 +112,8 @@ button:hover {
   display: block;
   background: #ffffff;
   border-radius: 0rem 0rem 0.4rem 0.4rem;
+  max-height: 50vh;
+  overflow-y: auto !important;
 }
 .data_container > h1 {
   text-align: center;
