@@ -106,7 +106,7 @@ button:hover {
   text-align: center;
   font-size: 1.4rem;
   color: #4b4949;
-  transition: all 0.3s ease-in;
+  transition: none 0.3s ease-in-out;
 }
 .data_container {
   display: block;
