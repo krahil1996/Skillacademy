@@ -1,54 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>TodoList</title>
+</head>
 
 <body>
-    <input type="text" placeholder="Enter Task" onfocus="this.value=''" id="myTask">
-    <button onclick="myFunction()">Try it</button>
-    <button onclick="deleteTask()">del it</button>
+    <div class="container">
+        <header>
+            <h1>Create your Todo-List</h1>
+            <form action="" id="task-form">
+                <input type="text" id="task-input" placeholder="What are your tasks for today?">
+                <input type="submit" id="task-submit" value="Add">
 
-    <ul id="myList">
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
 
-    </ul>
+                <div id="tasks">
+
+                </div>
+
+            </section>
+        </main>
+    </div>
 
 
 
-    <script>
-        function myFunction() {
-
-            var node = document.createElement("LI");
-            var myTask = document.getElementById("myTask").value;
-            var textnode = document.createTextNode(myTask);
-            node.appendChild(textnode);
-            document.getElementById("myList").appendChild(node);
-            var btn = document.createElement("input");
-            var abcElements = document.querySelectorAll('LI');
-
-            for (var i = 0; i < abcElements.length; i++) {
-                abcElements[i].id = 'abc-' + i;
-            }
-            // node.setAttribute("id", "li1");
-            btn.setAttribute("type", "submit");
-            btn.setAttribute("value", "delete");
-            btn.setAttribute("id", "delete");
-            node.appendChild(btn);
-            btn.addEventListener('click', () => {
-                // console.log("OK");
-                document.getElementById("abc-" + i)
-                    .parentNode.removeChild
-                    (document.getElementById("abc-" + i))
-
-            })
-
-        }
-
-        function deleteTask() {
-            var i = 0;
-            var item = document.getElementsByTagName("LI")[i];
-            i++;
-            item.parentNode.removeChild(item);
-        }
-
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>

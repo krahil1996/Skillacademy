@@ -90,7 +90,7 @@ form {
 }
 
 button:hover {
-  background-color: #464647;
+  background-color: #1c1c1d;
   color: #ffffff;
   transition: all 0.3s ease-in;
 }
@@ -125,20 +125,16 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-right: 20px;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
-  padding-left: 0.5rem;
+  margin: 0.5rem 1rem;
+  padding-left: 1rem;
   font-size: 1.3rem;
-  list-style-type: none;
   background: #eeeeee;
   border-radius: 0.3rem;
   transition: all 0.3s ease-in;
-}
-
-.task {
-  display: flex;
-  flex-direction: row;
+  border: solid #1c1c1d 1px;
 }
 
 .t-btn {

@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <h1 class="poppins-semibold">TODO LIST</h1>
-    <form action="">
+    <form action="" id="task-form">
       <input id="input-box" class="form__input" type="text" id="txt" placeholder="Type a task">
       <button type="button" class="add-btn" onclick="addTask()">ADD</button>
     </form>
@@ -28,108 +28,87 @@
       <P id="emt-msg"></P>
       <p id="p-text">
         The list is empty</p>
-      <ul id="taskList"></ul>
+      <ol id="taskList">
+
+
+      </ol>
     </div>
   </div>
 
 
 </body>
 
-<!-- <script src="index.js"></script> -->
-<script>
-  function addTask() {
-    let input = document.getElementById("input-box").value;
-    let inputText = document.createTextNode(input);
-    let emptyWarning = document.getElementById("emt-msg")
-    let listEmpty = document.getElementById("p-text");
+<script src="index.js"></script>
 
-
-
-    if (input === "") {
-      // alert('Please enter the task name')
-      setTimeout(() => {
-        emptyWarning.innerText = "Please Enter The Task"
-      }, 500);
-
-      setInterval(() => {
-        emptyWarning.innerText = "";
-      }, 5000);
-    } else {
-      // for remove list empty msg
-      listEmpty.innerText = "";
-      // adding some styles to
-      listEmpty.style.borderColor = "rgb(71 101 209)";
-      listEmpty.style.borderStyle = "solid";
-      listEmpty.style.borderWidth = "1px";
-      // for remove text from text box after adding the element
-      document.getElementById("input-box").value = "";
-      // perform element create and append these elements
-      let TaskList = document.createElement("li");
-      TaskList.appendChild(inputText);
-      document.getElementById("taskList").appendChild(TaskList);
-      let div = document.createElement("Div");
-      TaskList.appendChild(div);
-      let btn1 = document.createElement("BUTTON");
-      let btnText1 = document.createTextNode("Edit")
-      let btn2 = document.createElement("BUTTON");
-      let btnText2 = document.createTextNode("Delete")
-      let listEle = document.querySelectorAll("LI");
-      // for loop for set id name in sequence to every append element
-      for (var i = 0; i < listEle.length; i++) {
-        var listR = listEle[i].id = `list-${[i + 1]}`;
-        TaskList.setAttribute("id", listR);
-      }
-      console.log(listR);
-      //adding attrbutes
-      btn1.appendChild(btnText1);
-      btn1.setAttribute("type", "submit");
-      btn1.setAttribute("id", "delete");
-      btn1.setAttribute("class", "t-btn");
-      btn2.appendChild(btnText2);
-      div.appendChild(btn1,);
-      // adding event listener to button 1
-      btn1.addEventListener('click', () => {
-        // document.getElementById(`list-${i}`)
-        // console.log("Edit- " + i);
-      })
-
-      // adding event listener to button 2
-      btn2.setAttribute("type", "submit");
-      btn2.setAttribute("id", "delete");
-      btn2.setAttribute("class", "t-btn");
-      div.appendChild(btn2,);
-      btn2.addEventListener('click', () => {
-        let findEle = document.getElementById(`list-${i}`);
-        findEle.parentNode.removeChild(findEle);
-        console.log("Delete- " + i);
-        if (document.getElementById("taskList").innerText == "") {
-          listEmpty.innerText = "The list is empty"
-          listEmpty.style.border = "none"
-          list
-
-        }
-      })
-    }
-  }
-
-
-
-</script>
 
 
 
 
 </html>
 
-<!-- <li>Rahil Khan
-          <div>
-            <button class="t-btn"><span>Update</span></button>
-            <button class="t-btn"><span>Delete</span></button>
-          </div>
-        </li>
-        <li>Israil khan
-          <div>
-            <button class="t-btn">Update</button>
-            <button class="t-btn">Delete</button>
-          </div>
-        </li> -->
+<!-- function addTask() {
+let input = document.getElementById("input-box").value;
+let inputText = document.createTextNode(input);
+let emptyWarning = document.getElementById("emt-msg")
+let listEmpty = document.getElementById("p-text");
+
+
+
+if (input === "") {
+// alert('Please enter the task name')
+setTimeout(() => {
+emptyWarning.innerText = "Please Enter The Task"
+}, 500);
+
+setInterval(() => {
+emptyWarning.innerText = "";
+}, 5000);
+} else {
+// for remove list empty msg
+listEmpty.innerText = "";
+// adding some styles to
+listEmpty.style.borderColor = "rgb(71 101 209)";
+listEmpty.style.borderStyle = "solid";
+listEmpty.style.borderWidth = "1px";
+// for remove text from text box after adding the element
+document.getElementById("input-box").value = "";
+// perform element create and append these elements
+let TaskList = document.createElement("li");
+TaskList.appendChild(inputText);
+document.getElementById("taskList").appendChild(TaskList);
+let div = document.createElement("Div");
+TaskList.appendChild(div);
+let btn1 = document.createElement("BUTTON");
+let btnText1 = document.createTextNode("Edit")
+let btn2 = document.createElement("BUTTON");
+let btnText2 = document.createTextNode("Delete")
+let listEle = document.querySelectorAll("LI");
+// for loop for set id name in sequence to every append element
+for (var i = 0; i < listEle.length; i++) { var listR=listEle[i].id=`list-${[i + 1]}`; TaskList.setAttribute("id",
+  listR); } console.log(listR); //adding attrbutes btn1.appendChild(btnText1); btn1.setAttribute("type", "submit" );
+  btn1.setAttribute("class", "t-btn" ); btn2.appendChild(btnText2); div.appendChild(btn1); // adding event listener to
+  Delete Button btn2.setAttribute("type", "submit" ); btn2.setAttribute("class", "t-btn" ); div.appendChild(btn2,);
+  btn2.addEventListener('click', deleteTask=()=> {
+  let findEle = document.getElementById(`list-${i}`);
+  findEle.parentNode.removeChild(findEle);
+  if (document.getElementById("taskList").innerText == "") {
+  listEmpty.innerText = "The list is empty"
+  listEmpty.style.border = "none"
+  }
+  console.log(btn2.innerText + '-' + i);
+  })
+
+
+  // adding event listener to Edit Button
+  btn1.addEventListener('click', editTask = () => {
+  let findEle1 = document.getElementById(`list-${i}`);
+  findEle1.innerText = "kjdfkj"
+  // newinput = prompt("Enter New Task").trim();
+  // findEle.innerHTML = `${newinput} <div><button type="submit" onclick=editTask() class="t-btn">Edit</button><button
+      type="submit" onclick="deleteTask()" class="t-btn">Delete</button></div> `;
+  console.log(findEle1);
+  })
+  }
+
+
+  } -->
