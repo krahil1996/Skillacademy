@@ -29,7 +29,7 @@ body {
   /* background: var(--containerBG); */
   overflow: auto;
   height: 60vh;
-  background: fixed linear-gradient(to top, #9bd7d7 0%, #96e096 100%);
+  background: fixed linear-gradient(to top, #9fe3e3 20%, #96e096 75%);
 }
 .container {
   display: flex;
@@ -38,8 +38,8 @@ body {
   align-content: center;
   justify-content: center;
   margin: 6rem auto;
-  /* max-width: 115ch; */
-  max-width: 80vw;
+  width: 90%;
+  max-width: 70rem;
   box-shadow: 5px 7px 10px rgb(155, 155, 155);
   border-radius: 0.5rem;
   background: var(--headbackground);
@@ -56,7 +56,8 @@ body {
   transition: all 0.3s ease-in;
 }
 form {
-  display: block;
+  display: inline-block;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -73,7 +74,7 @@ form {
   background-color: rgb(255, 255, 255);
   border: none;
   outline: none;
-  border-bottom: 0.3rem solid rgb(51, 51, 223);
+  border-bottom: 0.3rem solid rgba(183, 77, 7, 0.685);
 }
 
 .form__input ~ button {
@@ -99,6 +100,7 @@ button:hover {
   text-align: center;
   font-size: 1.8rem;
   color: #eb2929;
+  transition: none 0.3s ease-in-out;
 }
 
 #p-text {
@@ -120,12 +122,13 @@ button:hover {
   margin-top: 1rem;
   text-shadow: 2px 1px #606061;
 }
-
+ol {
+  margin-bottom: 1rem;
+}
 li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: 20px;
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem 1rem;
@@ -135,6 +138,7 @@ li {
   border-radius: 0.3rem;
   transition: all 0.3s ease-in;
   border: solid #1c1c1d 1px;
+  box-shadow: 3px 3px 5px 1px #343333cf;
 }
 
 .t-btn {
@@ -149,4 +153,25 @@ li {
   background-color: rgb(255, 255, 255);
   border: none;
   transition: all 0.3s ease-in;
+}
+.data_container div {
+  display: inline-flex;
+  flex-direction: row;
+}
+div .update-input {
+  font-family: "Roboto", sans-serif;
+  color: #1e1d1d;
+  font-size: 1rem;
+  width: 100%;
+  margin-left: 5rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  background-color: white;
+  border: none;
+  outline: none;
+  /* border-bottom: 0.3rem solid rgba(183, 77, 7, 0.685); */
+}
+.update-input:focus {
+  border-bottom: 0.2rem solid rgba(25, 126, 9, 0.76);
+  transition: all 0.1s linear;
 }
